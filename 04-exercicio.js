@@ -40,10 +40,3 @@ class Carro {
   }
 }
 
-// Exemplo de uso da classe
-const meuCarro = new Carro("Toyota", "Corolla", 2020, "Preto", 50000);
-meuCarro.acelerar(50);
-meuCarro.frear(20);
-meuCarro.exibirInformacoes();
-meuCarro.realizarManutencao(1500);
-meuCarro.exibirInformacoes();
