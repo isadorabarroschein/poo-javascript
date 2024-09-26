@@ -34,7 +34,7 @@ class MinhaCulpa extends Cinema {
 
   oscar() {
     console.log(
-      `O ator ${this.ator} recebu o Oscar pela interpretação do ${this.personagem}`
+      `O ator ${this.ator} recebu o Oscar pela interpretação do personagem ${this.personagem}`
     );
   }
 }
@@ -64,3 +64,5 @@ filmeMinhaCulpa.mostrarSinopse();
 filmeMinhaCulpa.oscar();
 
 const filmeCrepusculo = new Crepusculo("um lobo e um vampiro","drama","lobo mata vampiro","Robert Pattinson","Edward Cullen","lobo","vampiro");
+filmeCrepusculo.mostrarSinopse(); 
+filmeCrepusculo.oscar();
