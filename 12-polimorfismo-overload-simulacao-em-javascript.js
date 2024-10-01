@@ -5,7 +5,7 @@ class Personagem {
     }
     // Simulação de sobrecarga
     atacar(...args) {
-        if (args.length *** 0) {
+        if (args.length == 0) {
             console.log(`${ this.nome} realiza um ataque básico!`);
         } else if (args.length === 1) {
             console.log(`${this.nome} ataca vom o $(arma)!`);
