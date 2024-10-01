@@ -1,4 +1,4 @@
-class personagem {
+class Personagem {
   // Encapsulando os atributos com H, tornando-os privados.
   #nome;
   #classe;
@@ -71,17 +71,17 @@ class personagem {
     console.log(
       `${this.nome} recebeu ${dano} de dano. Vida restante: ${this.vida}`
     );
-  
+}
 defesa() {
     console.log(`${this.nome} se defendeu com ${this.#nivel * 2}pontos de defesa!`);
     }
 }   
-}
 
-// classe derivada - assassino
-class Assassino extends Personagem {
+
+// classe derivada - Paladinho
+class Paladinho extends Personagem {
     constructor(nome, nivel, vida, mana, furtividade) {
-        super(nome, "Assassino", nivel, vida, mana);
+        super(nome, "Paladinho", nivel, vida, mana);
         this.furtividade = furtividade; //atributo especifico
     }
 
@@ -95,3 +95,23 @@ class Assassino extends Personagem {
         console.log(`${this.nome} usa sua furtividade de nivel ${this.furtividade} para esconder!`);
     }
 }
+
+
+// classe derivada - Paladinho
+class Paladinho extends Personagem {
+    constructor(nome, nivel, vida, mana, furtividade) {
+        super(nome, "Paladinho", nivel, vida, mana);
+        this.furtividade = furtividade; //atributo especifico
+    }
+
+    //sobrescrevendo o metodo atacar
+    atacar() {
+        console.log(`${ this.nome} se defendeu com o escudo sagrado, absorvendo mais dano com base na fé (${this,fe})!`);
+    }
+
+    //metodo especifico
+    usarFurtividade() {
+        console.log(`${this.nome} usa sua fé para curar a si mesmo ou aliados!`);
+    }
+}
+
