@@ -78,10 +78,10 @@ defesa() {
 }   
 
 
-// classe derivada - Paladinho
-class Paladinho extends Personagem {
+// classe derivada - Paladino
+class Paladino extends Personagem {
     constructor(nome, nivel, vida, mana, furtividade) {
-        super(nome, "Paladinho", nivel, vida, mana);
+        super(nome, "Paladino", nivel, vida, mana);
         this.furtividade = furtividade; //atributo especifico
     }
 
@@ -97,21 +97,21 @@ class Paladinho extends Personagem {
 }
 
 
-// classe derivada - Paladinho
-class Paladinho extends Personagem {
+// classe derivada - Mecanico
+class Mecanico extends Personagem {
     constructor(nome, nivel, vida, mana, furtividade) {
-        super(nome, "Paladinho", nivel, vida, mana);
+        super(nome, "Mecanico", nivel, vida, mana);
         this.furtividade = furtividade; //atributo especifico
     }
 
-    //sobrescrevendo o metodo atacar
-    atacar() {
-        console.log(`${ this.nome} se defendeu com o escudo sagrado, absorvendo mais dano com base na fé (${this,fe})!`);
-    }
-
-    //metodo especifico
-    usarFurtividade() {
-        console.log(`${this.nome} usa sua fé para curar a si mesmo ou aliados!`);
-    }
+   receberDano(dano) {
+   const danoReduzido = dano - this.engenharia;
+   super.receberDano(danoReduzido);
+   console.log(`${this.nome} usou sua engenharia para reduzir o dano em ${this.engenharia}.`);
+   }
+   // metodo especifico
+   construirTorre() {
+    console.log(`${this.nome} construiu uma torre defensiva!`);
+   }
 }
 
