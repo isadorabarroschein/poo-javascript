@@ -115,3 +115,42 @@ class Mecanico extends Personagem {
    }
 }
 
+//criando instancia de classe derivada assassino
+const assassino = new Assassino("Luna Sombria", 10, 100, 50, 8);
+ // chamando os metodos 
+ assassino.atacar(); // metodo sobrescrito
+ assassino.usarFurtividade(); // metodo especifico
+
+
+ // criando instancia da classe derivada paladino
+ const paladino = new Paladino("Sir Lancelot", 12, 120, 70, 15);
+ // Chamando os metodos
+ paladino.defesa(); //metodo sobrescrito
+ paladino.curar(); // metodo especifico
+
+ // criando instancia de classe derivada mecanico
+ const mecanico = new Mecanico("Roberto das Engrenagens", 8, 90, 40, 5);
+  // chamando os metodos
+  mecanico.receberDano(30); // metodo sobrescrito
+ mecanico.construirTorre(); // metodo especifico
+
+ console.log("----------------------------------");
+ console.log("Modificando os objetos usando setters");
+ console.log("----------------------------------");
+
+ // modificando o objeto assassino usando setters
+ assassino.nome = "Raven";
+ console.log(`Nome modificado: ${assassino.nome}`);
+ assassino.atacar();
+
+ // modificando o objeto paladino usando setters
+ paladino.vida = 150;
+ console.log(`Vida modificada: ${paladino.vida}`);
+ paladino.defesa();
+
+ // modificando o objeto mecanico usando setters
+
+ mecanico.mana = 60;
+ console.log(`Mana modificada: ${mecanico.mana}`);
+ mecanico.receberDano(50);
+
